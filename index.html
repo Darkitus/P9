@@ -39,8 +39,23 @@
     />
     <!-- Twitter -->
     <title>Nina Carducci - Photographe</title>
+    <link
+      rel="preload"
+      href="./assets/bootstrap/bootstrap.min.css"
+      as="style"
+    />
+    <link rel="preload" href="./assets/style.min.css" as="style" />
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/style.min.css" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -119,22 +134,26 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img
-                srcset="
-                  ./assets/images/slider/ryoji-iwata-business-extrasmall.jpg  410w,
-                  ./assets/images/slider/ryoji-iwata-business-small.jpg       768w,
-                  ./assets/images/slider/ryoji-iwata-business-medium.jpg     1024w,
-                  ./assets/images/slider/ryoji-iwata-business-large.jpg      1980w
-                "
-                sizes="(max-width: 410px) 410px, 
-                  (max-width: 768px) 768px, 
-                  (max-width: 1024px) 1024px, 
-                  1980px
-                "
-                src="./assets/images/slider/ryoji-iwata-business-extrasmall.jpg"
-                class="d-block w-100"
-                alt="Ryoji Iwata - Photographie d'entreprise"
-              />
+              <picture>
+                <source
+                  srcset="./assets/images/slider/ryoji-iwata-business-small.jpg"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./assets/images/slider/ryoji-iwata-business-medium.jpg
+                  "
+                  media="(max-width: 1024px)"
+                />
+                <source
+                  srcset="./assets/images/slider/ryoji-iwata-business-large.jpg"
+                />
+                <img
+                  src="./assets/images/slider/ryoji-iwata-business-extrasmall.jpg"
+                  class="d-block w-100"
+                  alt="Ryoji Iwata - Photographie d'entreprise"
+                />
+              </picture>
             </div>
             <div class="carousel-item">
               <img
