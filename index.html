@@ -120,7 +120,18 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="./assets/images/slider/ryoji-iwata-business.jpg"
+                srcset="
+                  ./assets/images/slider/ryoji-iwata-business-extrasmall.jpg  410w,
+                  ./assets/images/slider/ryoji-iwata-business-small.jpg       768w,
+                  ./assets/images/slider/ryoji-iwata-business-medium.jpg     1024w,
+                  ./assets/images/slider/ryoji-iwata-business-large.jpg      1980w
+                "
+                sizes="(max-width: 410px) 410px, 
+                  (max-width: 768px) 768px, 
+                  (max-width: 1024px) 1024px, 
+                  1980px
+                "
+                src="./assets/images/slider/ryoji-iwata-business-extrasmall.jpg"
                 class="d-block w-100"
                 alt="Ryoji Iwata - Photographie d'entreprise"
               />
@@ -359,7 +370,7 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/maugallery.js"></script>
-    <script src="./assets/scripts.js"></script>
+    <script src="./assets/maugallery.min.js"></script>
+    <script src="./assets/scripts.min.js"></script>
   </body>
 </html>
